@@ -1,0 +1,7 @@
+    response1 = requests.post(URL+'/prediction',json={
+            "dataset_path": os.path.join(
+                test_data_path,
+                "testdata.csv")}).text
+    response2 = requests.get(URL+'/scoring').text
+    response3 = requests.get(URL+'/summarystats').text
+    response4 = requests.get(URL+'/diagnostics').text
